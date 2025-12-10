@@ -1,4 +1,7 @@
 FROM metabase/metabase:latest
 
-ENV MB_JETTY_PORT 3000
-EXPOSE 3000
+# Laisser Render fournir le port via $PORT
+ENV MB_JETTY_PORT=$PORT
+EXPOSE $PORT
+
+CMD ["java", "-jar", "/app/metabase.jar"]
