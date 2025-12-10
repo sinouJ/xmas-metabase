@@ -6,6 +6,3 @@ ENV MB_JETTY_PORT 3000
 
 # Expose le port à Render
 EXPOSE $MB_JETTY_PORT
-
-# Commande par défaut
-CMD ["java", "-jar", "/app/metabase.jar"]
