@@ -4,4 +4,4 @@ FROM metabase/metabase:latest
 ENV MB_JETTY_PORT=$PORT
 EXPOSE $PORT
 
-CMD ["java", "-jar", "/app/metabase.jar"]
+CMD ["java", "-Dmb.jetty.host=0.0.0.0", "-jar", "/app/metabase.jar"]
